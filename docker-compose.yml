@@ -1,11 +1,7 @@
+version: '3'
 services:
-  app:
-    image: container-myid6dc
+  myservice:
     build:
-      context: ./src
-    ports:
-      - "5000:5000"
-    volumes:
-      - type: bind
-        source: ./src/web
-        target: /usr/src/app
+      context: /workspaces/container-myid6dc/web
+      dockerfile: Dockerfile
+    image: kool1
